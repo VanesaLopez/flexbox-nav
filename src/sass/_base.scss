@@ -1,0 +1,52 @@
+html {
+    width: 100vw;
+}
+
+.container-flex {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    header {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        background-color: $nav;  
+        
+        .item {            
+            padding: 0 1rem;
+            width: 33.33%;
+            font-size: 1rem;
+
+            &__brand {
+                text-align: center;
+            }
+
+            &__user {
+                text-align: right;
+            }
+        }
+
+    }
+
+    menu {
+        width: 100%;
+        display: flex;
+        flex-direction: row;     
+        align-items: flex-end;
+        
+        .item {
+            border-bottom: 0.1rem solid grey;
+            border-top: 0.1rem solid grey;
+            width: 14.28%;
+            text-align: center;
+            font-size: 0.8rem;
+
+            &:not(:last-child) {
+                border-right: 0.1rem solid grey;
+            }
+        }
+        
+    }
+ }
