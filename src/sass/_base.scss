@@ -1,26 +1,28 @@
-html {
+body {
     width: 100vw;
+    height: 100vh;
 }
 
 .container-flex {
-    width: 100%;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    
-    header {
+    height: 100%;
+
+    .header-flex {
         display: flex;
         flex-direction: row;
-        width: 100%;
-        background-color: $nav;  
-        
-        .item {            
+        background-color: $nav;
+
+        .item {
             padding: 0 1rem;
-            width: 33.33%;
-            font-size: 1rem;
+            flex-grow: 1;
+            h2, h1 {
+                font-size: 1rem;
+            }
 
             &__brand {
                 text-align: center;
+                display: none;
             }
 
             &__user {
@@ -30,16 +32,15 @@ html {
 
     }
 
-    menu {
+    .nav-flex {
         width: 100%;
         display: flex;
-        flex-direction: row;     
-        align-items: flex-end;
-        
+        flex-direction: row;
+
         .item {
             border-bottom: 0.1rem solid grey;
             border-top: 0.1rem solid grey;
-            width: 14.28%;
+            flex-grow: 1;
             text-align: center;
             font-size: 0.8rem;
 
@@ -47,6 +48,42 @@ html {
                 border-right: 0.1rem solid grey;
             }
         }
-        
+
+    }
+
+    @media(min-width: 37.5rem) {
+        .header-flex {
+            .item {
+                &__brand {
+                    display: initial;
+                }
+            }
+        }
+    }
+
+    @media(max-width: 37.5rem) {
+        .footer {
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            .nav-flex {
+                flex-basis: auto;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                background-color: grey;
+                padding: 0 0.2rem;
+                .item {
+                    flex-grow: 1;
+                    padding: 0.2rem;
+                    margin: 0.1rem;
+                    background-color: white;
+                }
+
+                h3 {
+                    font-size: 0.6rem;
+                }
+            }
+        }
     }
  }
