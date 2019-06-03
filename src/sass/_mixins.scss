@@ -1,7 +1,0 @@
-@mixin darkenBackground($amount: 0, $color: $lime) {
-    background-color: darken($color, $amount);
-}
-
-@mixin lightenBackground($amount: 0, $color: $lime) {
-    background-color: lighten($color, $amount);
-}

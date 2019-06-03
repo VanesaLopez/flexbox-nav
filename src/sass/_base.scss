@@ -11,7 +11,7 @@ body {
     .header-flex {
         display: flex;
         flex-direction: row;
-        background-color: $nav;
+        background-color: $colorBackgroundNav;
 
         .item {
             padding: 0 1rem;
@@ -38,14 +38,14 @@ body {
         flex-direction: row;
 
         .item {
-            border-bottom: 0.1rem solid grey;
-            border-top: 0.1rem solid grey;
+            border-bottom: $borderBase;
+            border-top: $borderBase;
             flex-grow: 1;
             text-align: center;
             font-size: 0.8rem;
 
             &:not(:last-child) {
-                border-right: 0.1rem solid grey;
+                border-right: $borderBase;
             }
         }
 
@@ -71,13 +71,13 @@ body {
                 flex-basis: auto;
                 flex-wrap: wrap;
                 justify-content: space-between;
-                background-color: grey;
+                background-color: $colorBackgroundMobileMenu;
                 padding: 0 0.2rem;
                 .item {
                     flex-grow: 1;
                     padding: 0.2rem;
                     margin: 0.1rem;
-                    background-color: white;
+                    background-color: $colorBaseBackground;
                 }
 
                 h3 {
